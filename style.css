@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+        .team{
+            background-image: radial-gradient(circle,#cb9c00,#594400);
+            padding: 20px 0px 30px 0px;
+        }
+        .teamhead{
+            font-size: 2.7em;
+            color: silver;
+            font-family: tahoma;
+            font-weight: normal;
+        }
+        .member{
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+            transition: all 0.4s ease-out;
+        }
+        .founder{
+            transition: all 0.4s ease-out;
+        }
+        .founder:hover{
+            
+            transform: scale(1.1,1.1);
+        }
+        .founder:hover .member{
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.25);
+        }
+        .member2{
+            border-radius: 50%;
+            height: 180px;
+            width: 180px;
+            box-shadow: 0 0 0.75rem rgba(0,0,0,0.25);
+            transition: all 0.4s ease-out;
+        }
+        .dev{
+            transition: all 0.4s ease-out;
+        }
+        .dev:hover{
+            transform: scale(1.1,1.1);
+        }
+        .dev:hover .member2{
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.25);
+        }
+        .txt1{
+            color: silver;
+            font-size: 1.2em;
+        }
+        .txt2{
+            color: silver;
+        }
+        .line{
+            width: 100px;
+            height: 8px;
+            background-color: silver;
+            border-radius: 50%;
+        }
+        @media screen and (max-width: 500px){
+            .teamhead{
+                font-size: 2.4em;
+            }
+        }
+
+
+.anu-bg{
+    background: lightcyan;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#Services-title{
+    font-size: 50px;
+}
+.card1{
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card1:hover{
+    box-shadow: 1px 3px 3px 0px;
+    transform: scale(1.2, 1.2);
+    
+    color: #594400;
+}
+
+.size{
+    animation-duration: 4s;
+    font-size: 50px;
+}
+.message{
+    box-shadow: 0 0 0.75rem rgba(0,0,0,0.25);
+}
+@keyframes animation1 {
+
+
+}
+.service-bg{
+    text-align: center;
+   margin: 100px;
+}
+.img1{
+    width: 300px;
+    height: 300px;
+}
+#aboutustitle{
+    font-size: 50px;
+}
+
+.bg3-contactus{
+    background: darksalmon;
+    text-align: center;
+}
+
+#contact-us{
+    color: white;
+}
