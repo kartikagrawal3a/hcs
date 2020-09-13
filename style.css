@@ -2,15 +2,42 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
-
+body{
+    background-image: linear-gradient(to top, #dfe9f3 0%,white 100%);
+}
+.links{
+    display: inline-block;
+    width: 100%;
+    color: #ececec;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    transition: all 0.4s;
+}
+.links:hover{
+    transform: scale(1.1,1.1);
+    text-decoration: none;
+    background-color: #ececec;
+    color: black;
+}
         .team{
-            background-image: radial-gradient(circle,#cb9c00,#594400);
-            padding: 20px 0px 30px 0px;
+            margin: 80px 40px 40px 40px;
+            padding: 60px 0px 40px 0px;
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+            transition: all 0.3s;
+            background-image: linear-gradient(to bottom right, white , #fbfaf2);
+        }
+        .team:hover{
+            transform: scale(1.03,1.05);
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
         }
         .teamhead{
+             
             font-size: 2.7em;
-            color: silver;
+            color: #28231d;
             font-family: tahoma;
             font-weight: normal;
         }
@@ -18,24 +45,23 @@
             border-radius: 50%;
             height: 200px;
             width: 200px;
-            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+            box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.7);
             transition: all 0.4s ease-out;
         }
         .founder{
             transition: all 0.4s ease-out;
         }
         .founder:hover{
-            
             transform: scale(1.1,1.1);
         }
         .founder:hover .member{
-            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.25);
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.5);
         }
         .member2{
             border-radius: 50%;
             height: 180px;
             width: 180px;
-            box-shadow: 0 0 0.75rem rgba(0,0,0,0.25);
+            box-shadow: 0 0 0.75rem rgba(0,0,0,0.7);
             transition: all 0.4s ease-out;
         }
         .dev{
@@ -45,44 +71,41 @@
             transform: scale(1.1,1.1);
         }
         .dev:hover .member2{
-            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.25);
+            box-shadow: 5px 10px 0.75rem rgba(0,0,0,0.5);
         }
         .txt1{
-            color: silver;
+            color: #28231d;
             font-size: 1.2em;
         }
         .txt2{
-            color: silver;
+            color: #28231d;
         }
         .line{
             width: 100px;
             height: 8px;
-            background-color: silver;
+            background-color: #28231d;
             border-radius: 50%;
         }
-        @media screen and (max-width: 500px){
-            .teamhead{
-                font-size: 2.4em;
-            }
-            .member{
-                width: 170px;
-                height: 170px;
-            }
-            .member2{
-                width: 150px;
-                height: 150px;
-            }
-        }
-
+        
 
 .anu-bg{
-    background: lightcyan;
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
     text-align: center;
-    padding-top: 100px;
+    padding: 60px 0px 40px 0px;
     padding-bottom: 100px;
+    margin: 80px 40px 40px 40px;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+.anu-bg:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 #Services-title{
-    font-size: 50px;
+    font-size: 2.7em;
+    color: #28231d;
+    font-family: tahoma;
+    font-weight: normal;
 }
 .card1{
     margin: 20px;
@@ -114,7 +137,15 @@
 }
 .service-bg{
     text-align: center;
-   margin: 100px;
+    margin: 80px 40px 40px 40px;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
+    padding: 50px 0px;
+    transition: all 0.3s;
+}
+.service-bg:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 .img1{
     width: 300px;
@@ -125,10 +156,246 @@
 }
 
 .bg3-contactus{
-    background: darksalmon;
+    background-image: linear-gradient(to bottom right, white , #fbfaf2);
+    margin: 80px 40px;
+    padding: 60px 0px 40px 0px;
     text-align: center;
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+.bg3-contactus:hover{
+    transform: scale(1.03,1.05);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
 }
 
 #contact-us{
-    color: white;
+    font-size: 2.7em;
+    color: #28231d;
+    font-family: tahoma;
 }
+section.content p{
+            text-align: center;
+            font-weight: bold;
+            padding: 30px 0px;
+            font-size: 3.2em;
+        }
+        section.content p span:first-child{
+            color: blue;
+        }
+        section.content p span:last-child{
+            color: #ed2939;
+        }
+        .sec1{
+            background-color: #26272b;
+        }
+        .sec1 .sec11{
+            border-bottom: 2px solid #333333;
+        }
+        strong{
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        .info{
+            width: 40%;
+            padding: 26px 20px;
+        }
+        .info p{
+            color: silver;
+            line-height: 1.5;
+        }
+        .linkss{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .linkss .link1,.linkss .link2,.linkss .link3{
+            padding: 26px 0px;
+        }
+        .link1 ul,.link2 ul,.link3 ul{
+            list-style: none;
+        }
+        .link1 ul li, .link2 ul li,.link3 ul li{
+            padding-bottom: 10px;
+            color: silver;
+        }
+        .link1 ul li a,.link2 ul li a,.link3 ul li a{
+            text-decoration: none;
+            transition: 0.4s;
+            color: silver;
+        }
+        .link1 ul li a:hover,.link2 ul li a:hover,.link3 ul li a:hover{
+            color: gold;
+        }
+        .link3 ul li i{
+            margin-right: 5px;
+        }
+        .sec1 .sec12{
+            border-bottom: 2px solid #555555;
+        }
+        .sec12 p{
+            font-size: 1.5em;
+            color: silver;
+            display: inline-block;
+        }
+        .sec12 a{ 
+            text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            margin: 17px 0px 17px 10px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: rgb(255,69,0);
+            transition: 0.4s;  
+        }
+        .sec12 a:hover{
+            background-color: skyblue;
+            color: black;
+        }
+        .sec13 ul{
+            list-style: none;
+            margin: 0;
+        }
+        .sec13 ul li{
+            display: inline-block;
+            margin: 25px 5px 25px 5px;
+        }
+        .sec13 ul li:first-child a{
+            color: silver;
+            display: inline-block;
+            padding: 15px 20px;
+            background-color: #36383b;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .sec13 ul li a{
+            color: silver;
+            display: inline-block;
+            padding: 15px 17px;
+            background-color: #36383b;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .sec13 ul li:nth-child(1) a:hover{
+            background-color: #3b5998;
+            color: white;
+        }
+        .sec13 ul li:nth-child(2) a:hover{
+            background-color: #00acee;
+            color: white;
+        }
+        .sec13 ul li:nth-child(3) a:hover{
+            background-color: #ea4335;
+            color: white;
+        }
+        .sec13 ul li:nth-child(4) a:hover{
+            background-color: #0e76a8;
+            color: white;
+        }
+        .sec13 ul li:nth-child(5) a:hover{
+            background-color: #ea4c89;
+            color: white;
+        }
+        .sec2{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 30px;
+        }
+        .sec2 p{
+            color: grey; 
+            position: relative;
+        }
+        .sec2 p a{
+            text-decoration: none;
+            color: grey;
+            transition: 0.3s;
+        }
+        .sec2 p::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: yellow;
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            transition: all 0.5s;
+            transition-timing-function: ease-out;
+
+        }
+        .sec2 p a:hover{
+            color: gold;
+            font-weight: bold;
+        }
+        .sec2 p:hover::after{
+            width: 100%;
+        }
+        .to-top{
+            background-color: orange;
+            position: fixed;
+            bottom: 800px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            cursor: pointer;
+            box-shadow: 0 0 0.75rem rgba(210,105,30,0.5);
+            transition: all 0.4s ease-in;
+        }
+        .to-top.active{
+            bottom: 30px;
+            opacity: 1;
+        }
+        .to-top:hover{
+            transform: scale(1.1,1.1);
+            text-decoration: none;
+            color: white;
+        }
+        @media screen and (max-width: 768px){
+            .sec1 .sec11{
+                flex-direction: column;
+            }
+            .info{
+                width: 100%;
+                padding: 30px 25px;
+            }
+            .linkss{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 500px){
+            .linkss{
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .linkss .link1,.linkss .link2,.linkss .link3{
+                text-align: center;
+            }
+            .teamhead{
+        font-size: 2.2em;
+    }
+    .member{
+        width: 170px;
+        height: 170px;
+    }
+    .member2{
+        width: 150px;
+        height: 150px;
+    }
+    .team,.anu-bg,.service-bg{
+         margin: 60px 20px 20px 20px;
+    }
+    .bg3-contactus{
+        margin: 60px 20px;
+    }
+        }
