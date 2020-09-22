@@ -416,18 +416,6 @@
 
          <center><div class="line mb-5"></div></center>
 
-         <?php
-            $msg="";
-            if (isset($_GET['success'])) {
-                $msg= "Email Sent Seccessfully!";
-                echo "<div class='alert alert-success'>".$msg."</div>";
-            }
-            if (isset($_GET['error'])) {
-                $msg= "Please Fill the required credentials!";
-                echo "<div class='alert alert-danger'>".$msg."</div>";
-            }
-         ?>
-
         <div class="row">
 
             <div class="col-md-6">
@@ -549,30 +537,3 @@
   </script>
 </body>
 </html>
-
-<?php
-
-if(isset($_POST['btn-send']))
-{
-    $UserName = $_POST['UName'];
-    $Email = $_POST['Email'];
-    $Subject = $_POST['Subject'];
-    $Msg = $_POST['msg'];
-
-    if(empty($UserName) || empty($Email) || empty($Subject) || empty($Msg))
-    {
-        echo "<script>alert('Please Fill the required credentials!')</script>";
-        echo "<script>window.open('index.php?error','_self')</script>";
-    }
-    else
-    {
-        $to = "anuragtripathi600@gmail.com";
-
-        if(mail($to,$Subject,$Msg,$Email))
-        {
-            echo "<script>alert('Email sent Successfully!')</script>";
-            echo "<script>window.open('index.php?success','_self')</script>";
-        }
-    }
-}
-?>
