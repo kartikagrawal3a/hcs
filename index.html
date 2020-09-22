@@ -1,9 +1,13 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>HCS</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -85,6 +89,43 @@
         transform: rotate(360deg);
     }
 }
+    video{
+        width: 50%;
+        height: auto;
+        box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.5);
+    }
+    video:focus{
+        outline: none;
+    }
+    .para{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .servicesabout{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .servicesabout ul li{
+        text-indent: 50px;
+    }
+    @media screen and (max-width: 800px){
+        video{
+            width: 70%;
+        }
+    }
+    @media screen and (max-width: 800px){
+        video{
+            width: 90%;
+        }
+        .para{
+            font-size: 16px;
+        }
+        .servicesabout{
+            font-size: 16px;
+        }
+    }
     </style>
     <script type="text/javascript">
         window.addEventListener('scroll',function(){
@@ -159,11 +200,27 @@
 <a name="about"></a>
 <div class="service-bg" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="120">
     <h1 id="#aboutustitle">About us</h1>
-     <center><div class="line"></div></center>
-    <!--This section will be completed once I get what to write here-->
+    <center><div class="line"></div></center>
+    <video class="mt-5" controls>
+        <source src="images/hcs.mp4" type="video/mp4">
+    </video>
+    <p class="lead para mx-auto mt-5 mb-3" align="justify">
+        In HCS, our mission is to provide the most pragmatic and elite services to our clients.<br>
+        We believe that, customers’ perception is our reality. Here we provide the certainty of our customers’ satisfaction.<br>
+        Our team of versatile innovators, sharp-witted marketers and savvy SEO experts, are highly passionate about serving their best possible services. We altogether endeavor to make a valuable workspace, to create creative and out of the box content.
+    </p>
+    <div class="servicesabout lead text-left">
+        Our Services:
+        <ul>
+            <li>Web Development</li>
+            <li>Android Development</li>
+            <li>Digital Marketing</li>
+            <li>Posters and Visiting Card design</li>
+        </ul>
+    </div>
 </div>
 <a name="service"></a>
-<div class="anu-bg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="120">
+<div class="anu-bg" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="180">
 
     <div class="container">
 
@@ -359,6 +416,18 @@
 
          <center><div class="line mb-5"></div></center>
 
+         <?php
+            $msg="";
+            if (isset($_GET['success'])) {
+                $msg= "Email Sent Seccessfully!";
+                echo "<div class='alert alert-success'>".$msg."</div>";
+            }
+            if (isset($_GET['error'])) {
+                $msg= "Please Fill the required credentials!";
+                echo "<div class='alert alert-danger'>".$msg."</div>";
+            }
+         ?>
+
         <div class="row">
 
             <div class="col-md-6">
@@ -399,7 +468,7 @@
 
                     <div class="card-body">
 
-                        <form action="process.php" method="post">
+                        <form action="index.php" method="post">
 
                             <input type="text" name="UName" placeholder="Name" class="form-control mb-2">
 
@@ -480,3 +549,30 @@
   </script>
 </body>
 </html>
+
+<?php
+
+if(isset($_POST['btn-send']))
+{
+    $UserName = $_POST['UName'];
+    $Email = $_POST['Email'];
+    $Subject = $_POST['Subject'];
+    $Msg = $_POST['msg'];
+
+    if(empty($UserName) || empty($Email) || empty($Subject) || empty($Msg))
+    {
+        echo "<script>alert('Please Fill the required credentials!')</script>";
+        echo "<script>window.open('index.php?error','_self')</script>";
+    }
+    else
+    {
+        $to = "anuragtripathi600@gmail.com";
+
+        if(mail($to,$Subject,$Msg,$Email))
+        {
+            echo "<script>alert('Email sent Successfully!')</script>";
+            echo "<script>window.open('index.php?success','_self')</script>";
+        }
+    }
+}
+?>
